@@ -16,6 +16,7 @@
 		</button>
 
 		<pre id="content" style="white-space: pre-wrap"></pre>
+		<pre id="content2" style="white-space: pre-wrap"></pre>
 
 		<script type="text/javascript">
 			/* exported gapiLoaded */
@@ -64,6 +65,16 @@
 				});
 				gapiInited = true;
 				maybeEnableButtons();
+				const access_token = localStorage.getItem("access_token");
+				console.log(access_token);
+				if (access_token) {
+					const res = await gapi.client.setToken({
+						access_token: access_token,
+					});
+					console.log(res);
+				}
+				listMajors();
+				console.log("here");
 			}
 
 			/**
@@ -98,6 +109,10 @@
 					if (resp.error !== undefined) {
 						throw resp;
 					}
+					console.log(resp);
+					const access_token = resp.access_token;
+					localStorage.setItem("access_token", access_token);
+					console.log(localStorage.getItem("access_token"));
 					document.getElementById("signout_button").style.visibility =
 						"visible";
 					document.getElementById("authorize_button").innerText =
@@ -142,8 +157,8 @@
 					response = await gapi.client.sheets.spreadsheets.values.get(
 						{
 							spreadsheetId:
-								"1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms",
-							range: "Class Data!A2:E",
+								"1gLHYR9yJPC-5d1t3RSQcJmdKaRIonWIOnRAmT0YW4rE",
+							range: "Sheet1!A2:E",
 						},
 					);
 				} catch (err) {
@@ -161,7 +176,7 @@
 					(str, row) => `${str}${row[0]}, ${row[4]}\n`,
 					"Name, Major:\n",
 				);
-				document.getElementById("content").innerText = output;
+				document.getElementById("content2").innerText = output;
 			}
 		</script>
 		<script
