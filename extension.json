@@ -27,7 +27,7 @@
 		"home": [
 			{
 				"id": "menuId1",
-				"title": "Ext Menu",
+				"title": "Export BOM to Google Sheets",
 				"menuItems": [
 					{
 						"id": "About",
@@ -40,7 +40,7 @@
 		"sch": [
 			{
 				"id": "menuId2",
-				"title": "Ext Menu",
+				"title": "Export BOM to Google Sheets",
 				"menuItems": [
 					{
 						"id": "About",
@@ -53,7 +53,7 @@
 		"pcb": [
 			{
 				"id": "menuId3",
-				"title": "Ext Menu",
+				"title": "Export BOM to Google Sheets",
 				"menuItems": [
 					{
 						"id": "About",
