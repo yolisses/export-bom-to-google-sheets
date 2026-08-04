@@ -1,24 +1,24 @@
 {
 	"name": "export-bom-to-google-sheets",
 	"uuid": "44fc0804e951475c8c01ee11a11eca99",
-	"displayName": "填写你的扩展名称 / Your Extension Name",
-	"description": "",
+	"displayName": "Export BOM to Google Sheets",
+	"description": "A simple extension to export a BOM to Google Sheets without manual download and upload required.",
 	"version": "1.0.0",
-	"publisher": "",
+	"publisher": "yolisses",
 	"engines": {
 		"eda": "^3.2.0"
 	},
 	"license": "Apache-2.0",
 	"repository": {
 		"type": "extension-store",
-		"url": ""
+		"url": "https://github.com/yolisses/export-bom-to-google-sheets"
 	},
 	"categories": "Other",
 	"keywords": ["Tool"],
 	"images": {
 		"logo": "./images/logo.png"
 	},
-	"homepage": "",
+	"homepage": "https://github.com/yolisses/export-bom-to-google-sheets",
 	"bugs": "",
 	"activationEvents": {},
 	"entry": "./dist/index",
