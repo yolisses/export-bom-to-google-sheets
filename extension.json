@@ -14,9 +14,7 @@
 		"url": ""
 	},
 	"categories": "Other",
-	"keywords": [
-		"Tool"
-	],
+	"keywords": ["Tool"],
 	"images": {
 		"logo": "./images/logo.png"
 	},

@@ -16,14 +16,19 @@
  * For more development details, please visit:
  * https://prodocs.easyeda.com/en/api/guide/
  */
-import extensionConfig from '../extension.json' with { type: 'json' };
+import extensionConfig from "../extension.json" with { type: "json" };
 
 // eslint-disable-next-line unused-imports/no-unused-vars
-export function activate(status?: 'onStartupFinished', arg?: string): void {}
+export function activate(status?: "onStartupFinished", arg?: string): void {}
 
 export function about(): void {
 	eda.sys_Dialog.showInformationMessage(
-		eda.sys_I18n.text('EasyEDA extension SDK v', undefined, undefined, extensionConfig.version),
-		eda.sys_I18n.text('About'),
+		eda.sys_I18n.text(
+			"EasyEDA extension SDK v",
+			undefined,
+			undefined,
+			extensionConfig.version,
+		),
+		eda.sys_I18n.text("About"),
 	);
 }
