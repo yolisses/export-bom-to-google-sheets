@@ -1,11 +1,11 @@
 {
-	"name": "pro-api-sdk",
+	"name": "Export BOM to Google Sheets",
 	"type": "module",
 	"version": "1.6.3",
-	"description": "JLCEDA & EasyEDA Professional Extension API Development Toolkit",
-	"author": "JLCEDA <support@lceda.cn>",
+	"description": "A simple extension to export a BOM to Google Sheets without manual download and upload required",
+	"author": "yolisses",
 	"license": "Apache-2.0",
-	"homepage": "https://pro.lceda.cn/",
+	"homepage": "github.com/yolisses",
 	"bin": {
 		"create-easyeda-api-sdk": "./build/create.js"
 	},
