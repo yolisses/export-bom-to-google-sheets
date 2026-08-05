@@ -6,23 +6,22 @@ import { showError } from './showError';
 import { showInfo } from './showInfo';
 import { showInputDialog } from './showInputDialog';
 
-
 export async function exportBomToGoogleSheets(): Promise<void> {
 	try {
 		const spreadsheetId = await showInputDialog(
 			'Enter the Google Spreadsheet ID where the BOM should be appended.\n'
 			+ 'Example: 1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms',
-			'Spreadsheet ID'
+			'Spreadsheet ID',
 		);
 
 		if (!spreadsheetId) {
-			return;
+			throw new Error('Missing spreadsheet id');
 		}
 
 		const sheetName = (await showInputDialog(
 			'Enter the target sheet name in the spreadsheet.',
 			'Sheet Name',
-			'Sheet1'
+			'Sheet1',
 		)) || 'Sheet1';
 
 		showInfo('Generating BOM and preparing upload...');
