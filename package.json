@@ -17,7 +17,7 @@
 		"lint": "eslint",
 		"fix": "eslint --fix",
 		"build": "npm run compile && ts-node ./build/packaged.ts",
-		"watch": "while inotifywait -e modify,create,delete,move -r src; do npm run build; done",
+		"watch": "while inotifywait --event modify,create,delete,move --exclude dist build .git -r .; do npm run build; done",
 		"debug": "ts-node ./build/dev.ts",
 		"update:check": "ts-node ./build/update.ts check",
 		"update": "ts-node ./build/update.ts update && npm install",
