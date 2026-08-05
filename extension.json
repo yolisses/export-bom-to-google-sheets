@@ -5,19 +5,12 @@
 	"description": "A simple extension to export a BOM to Google Sheets without manual download and upload required.",
 	"version": "1.0.0",
 	"publisher": "yolisses",
-	"engines": {
-		"eda": "^3.2.0"
-	},
+	"engines": { "eda": "^3.2.0" },
 	"license": "Apache-2.0",
-	"repository": {
-		"type": "extension-store",
-		"url": "https://github.com/yolisses/export-bom-to-google-sheets"
-	},
+	"repository": { "type": "extension-store", "url": "https://github.com/yolisses/export-bom-to-google-sheets" },
 	"categories": "Other",
 	"keywords": ["Tool"],
-	"images": {
-		"logo": "./images/logo.png"
-	},
+	"images": { "logo": "./images/logo.png" },
 	"homepage": "https://github.com/yolisses/export-bom-to-google-sheets",
 	"bugs": "",
 	"activationEvents": {},
@@ -29,17 +22,10 @@
 				"id": "menuId1",
 				"title": "Export BOM to Google Sheets",
 				"menuItems": [
-					{
-						"id": "Export",
-						"title": "Export BOM to Google Sheets",
-						"registerFn": "exportBomToGoogleSheets"
-					},
-					{
-						"id": "About",
-						"title": "About...",
-						"registerFn": "about"
-					}
+					{ "id": "Export", "title": "Export BOM to Google Sheets", "registerFn": "exportBomToGoogleSheets" },
+					{ "id": "About", "title": "About...", "registerFn": "about" }
 				]
+
 			}
 		],
 		"sch": [
@@ -47,17 +33,10 @@
 				"id": "menuId2",
 				"title": "Export BOM to Google Sheets",
 				"menuItems": [
-					{
-						"id": "Export",
-						"title": "Export BOM to Google Sheets",
-						"registerFn": "exportBomToGoogleSheets"
-					},
-					{
-						"id": "About",
-						"title": "About...",
-						"registerFn": "about"
-					}
+					{ "id": "Export", "title": "Export BOM to Google Sheets", "registerFn": "exportBomToGoogleSheets" },
+					{ "id": "About", "title": "About...", "registerFn": "about" }
 				]
+
 			}
 		],
 		"pcb": [
@@ -65,18 +44,12 @@
 				"id": "menuId3",
 				"title": "Export BOM to Google Sheets",
 				"menuItems": [
-					{
-						"id": "Export",
-						"title": "Export BOM to Google Sheets",
-						"registerFn": "exportBomToGoogleSheets"
-					},
-					{
-						"id": "About",
-						"title": "About...",
-						"registerFn": "about"
-					}
+					{ "id": "Export", "title": "Export BOM to Google Sheets", "registerFn": "exportBomToGoogleSheets" },
+					{ "id": "About", "title": "About...", "registerFn": "about" }
 				]
+
 			}
 		]
+
 	}
 }
