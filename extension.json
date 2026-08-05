@@ -30,6 +30,11 @@
 				"title": "Export BOM to Google Sheets",
 				"menuItems": [
 					{
+						"id": "Export",
+						"title": "Export BOM to Google Sheets",
+						"registerFn": "exportBomToGoogleSheets"
+					},
+					{
 						"id": "About",
 						"title": "About...",
 						"registerFn": "about"
@@ -43,6 +48,11 @@
 				"title": "Export BOM to Google Sheets",
 				"menuItems": [
 					{
+						"id": "Export",
+						"title": "Export BOM to Google Sheets",
+						"registerFn": "exportBomToGoogleSheets"
+					},
+					{
 						"id": "About",
 						"title": "About...",
 						"registerFn": "about"
@@ -55,6 +65,11 @@
 				"id": "menuId3",
 				"title": "Export BOM to Google Sheets",
 				"menuItems": [
+					{
+						"id": "Export",
+						"title": "Export BOM to Google Sheets",
+						"registerFn": "exportBomToGoogleSheets"
+					},
 					{
 						"id": "About",
 						"title": "About...",
