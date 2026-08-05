@@ -37,12 +37,7 @@ export async function showTwoInputDialog(): Promise<void> {
 			// There's a bug that breaks the focus when some position
 			// or size prop is provided.
 			// Tested in 2026-08-05
-			<Modal
-				// top={120}
-				// left={200}
-				// width={380}
-				// height={260}
-			>
+			<Modal>
 				<Dialog
 					title="Enter values"
 					onClose={closeDialog}
