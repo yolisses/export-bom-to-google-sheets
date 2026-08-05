@@ -1,36 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Reconciler from 'react-reconciler';
-import {
-  ConcurrentRoot,
-  ContinuousEventPriority,
-  DefaultEventPriority,
-  DiscreteEventPriority,
-} from 'react-reconciler/constants';
+import Constants from 'react-reconciler/constants';
 
 export async function showTwoInputDialog(): Promise<void> {
-	const { Components, WorkerPortal, VirtualRender, LC_DESIGN_COMPONENTS_NAMES }
+	const { Components, WorkerPortal, VirtualRender }
 		= await eda.sys_Dialog.createReactComponentizationDialogInterface(
-			{
-				createContext: React.createContext,
-				useContext: React.useContext,
-				useRef: React.useRef,
-				useEffect: React.useEffect,
-				createElement: React.createElement,
-			},
-			{
-				default: Reconciler,
-				constants: {
-					ContinuousEventPriority,
-					DiscreteEventPriority,
-					DefaultEventPriority,
-					ConcurrentRoot,
-				},
-			},
+			React,
+			{ default: Reconciler, constants: Constants },
 		);
-
-	// Inspect once if you still have issues
-	console.log('Available components:', Object.keys(Components));
-	console.log('LC_DESIGN_COMPONENTS_NAMES:', LC_DESIGN_COMPONENTS_NAMES);
 
 	const { Dialog, Input, Modal, Flex } = Components;
 
@@ -39,9 +16,7 @@ export async function showTwoInputDialog(): Promise<void> {
 
 	function closeDialog() {
 		try {
-			// Try the most common cleanup paths
-			(root as any).unmount?.();
-			(root as any).render?.(null);
+			root.render(null as any);
 		}
 		catch (e) {
 			console.warn('closeDialog failed', e);
@@ -49,45 +24,48 @@ export async function showTwoInputDialog(): Promise<void> {
 	}
 
 	function TwoInputDialog() {
-		const [text, setText] = React.useState('');
-		const [sheetName, setSheetName] = React.useState('Sheet1');
+		const [text, setText] = useState('');
+		const [sheetName, setSheetName] = useState('Sheet1');
 
 		const handleOk = () => {
 			console.log({ text, sheetName });
-			// do your real work here
+			// your real work here
 			closeDialog();
 		};
 
 		return (
 			<Modal
-				height={200}
-				width={300}
-				left={100}
-				top={100}
+				top={120}
+				left={200}
+				width={380}
+				height={260}
+				overlay={true}
+				// allow dragging (Modal is the draggable shell)
+				maxDragX={2000}
+				maxDragY={2000}
 			>
 				<Dialog
 					title="Enter values"
+					width={380}
+					height={260}
 					onClose={closeDialog}
-					hide={false}
-					width={300}
-					height={200}
 					buttons={[
 						{ text: 'Cancel', onClick: closeDialog },
-						{ text: 'Ok', onClick: handleOk },
+						{ text: 'OK', onClick: handleOk },
 					]}
 				>
-					<Flex direction="column" gap={10}>
+					<Flex direction="column" gap={12} padding={[12]}>
 						<Input
 							type="text"
-							value={text}
 							placeholder="Google Sheet URL"
-							onChange={(e: any) => setText(e?.target?.value ?? e)}
+							value={text}
+							onChange={setText}
 						/>
 						<Input
 							type="text"
 							placeholder="Sheet Name"
 							value={sheetName}
-							onChange={(e: any) => setSheetName(e?.target?.value ?? e)}
+							onChange={setSheetName}
 						/>
 					</Flex>
 				</Dialog>
