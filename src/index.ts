@@ -17,6 +17,7 @@
  * https://prodocs.easyeda.com/en/api/guide/
  */
 import { about } from './about';
+import { TestGoogleSignIn } from './auth/TestGoogleSignIn';
 import { exportBomToGoogleSheets } from './exportBomToGoogleSheets';
 import { showTwoInputDialog } from './showTwoInputDialog';
 import { testMenu } from './testMenu';
@@ -27,4 +28,10 @@ declare global {
 	}
 }
 
-export { about, exportBomToGoogleSheets, showTwoInputDialog, testMenu };
+export {
+	about,
+	exportBomToGoogleSheets,
+	showTwoInputDialog,
+	TestGoogleSignIn,
+	testMenu,
+};
