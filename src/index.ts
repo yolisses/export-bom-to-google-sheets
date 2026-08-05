@@ -18,6 +18,8 @@
  */
 import { about } from './about';
 import { exportBomToGoogleSheets } from './exportBomToGoogleSheets';
+import { showTwoInputDialog } from './showTwoInputDialog';
+import { testMenu } from './testMenu';
 
 declare global {
 	interface Window {
@@ -25,4 +27,4 @@ declare global {
 	}
 }
 
-export { about, exportBomToGoogleSheets };
+export { about, exportBomToGoogleSheets, showTwoInputDialog, testMenu };
