@@ -2,6 +2,7 @@
 	"compilerOptions": {
 		"incremental": true,
 		"target": "ESNext",
+		"jsx": "react",
 		"lib": ["ESNext", "DOM"],
 		"experimentalDecorators": true,
 		"module": "ESNext",
