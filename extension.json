@@ -17,17 +17,6 @@
 	"entry": "./dist/index",
 	"dependentExtensions": {},
 	"headerMenus": {
-		"home": [
-			{
-				"id": "menuId1",
-				"title": "Export BOM to Google Sheets",
-				"menuItems": [
-					{ "id": "Export", "title": "Export BOM to Google Sheets", "registerFn": "exportBomToGoogleSheets" },
-					{ "id": "About", "title": "About...", "registerFn": "about" }
-				]
-
-			}
-		],
 		"sch": [
 			{
 				"id": "menuId2",
@@ -46,17 +35,6 @@
 					{ "id": "Export", "title": "Export BOM to Google Sheets", "registerFn": "exportBomToGoogleSheets" }
 				]
 
-			},
-			{
-				"id": "menuId4",
-				"title": "Test some input",
-				"menuItems": [
-					{
-						"id": "testMenu",
-						"title": "test menu",
-						"registerFn": "testMenu"
-					}
-				]
 			},
 			{
 				"id": "showTwoInputDialog",
