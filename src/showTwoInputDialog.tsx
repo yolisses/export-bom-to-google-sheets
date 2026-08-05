@@ -34,15 +34,14 @@ export async function showTwoInputDialog(): Promise<void> {
 		};
 
 		return (
+			// There's a bug that breaks the focus when some position
+			// or size prop is provided.
+			// Tested in 2026-08-05
 			<Modal
-				top={120}
-				left={200}
-				width={380}
-				height={260}
-				overlay={true}
-				// allow dragging (Modal is the draggable shell)
-				maxDragX={2000}
-				maxDragY={2000}
+				// top={120}
+				// left={200}
+				// width={380}
+				// height={260}
 			>
 				<Dialog
 					title="Enter values"
