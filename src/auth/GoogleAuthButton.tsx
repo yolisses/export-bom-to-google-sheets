@@ -4,6 +4,7 @@ export function GoogleAuthButton() {
 	// TODO set document.handleGoogleSignIn
 	return (
 		<Fragment>
+			<script src="https://accounts.google.com/gsi/client" async></script>
 			<div
 				id="g_id_onload"
 				data-client_id="47676842563-q0ptemrqjnu7njnnv4d8pck1omt51uu6.apps.googleusercontent.com"

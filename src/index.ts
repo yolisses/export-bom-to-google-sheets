@@ -19,6 +19,7 @@
 import { about } from './about';
 import { TestGoogleSignIn } from './auth/TestGoogleSignIn';
 import { exportBomToGoogleSheets } from './exportBomToGoogleSheets';
+import { openIframe } from './openIframe';
 import { showTwoInputDialog } from './showTwoInputDialog';
 import { testMenu } from './testMenu';
 
@@ -31,6 +32,7 @@ declare global {
 export {
 	about,
 	exportBomToGoogleSheets,
+	openIframe,
 	showTwoInputDialog,
 	TestGoogleSignIn,
 	testMenu,

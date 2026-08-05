@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Reconciler from 'react-reconciler';
 import Constants from 'react-reconciler/constants';
+import { openIframe } from './openIframe';
 
 export async function showTwoInputDialog(): Promise<void> {
 	const { Components, WorkerPortal, VirtualRender }
@@ -11,6 +12,7 @@ export async function showTwoInputDialog(): Promise<void> {
 
 	const { Dialog, Input, Modal, Flex } = Components;
 
+	openIframe();
 	const portal = new WorkerPortal();
 	const root = new VirtualRender();
 
@@ -46,6 +48,7 @@ export async function showTwoInputDialog(): Promise<void> {
 						{ text: 'OK', onClick: handleOk },
 					]}
 				>
+					<Button onClick={openIframe} />
 					<Flex direction="column" gap={12} padding={[12]}>
 						<Input
 							type="text"
