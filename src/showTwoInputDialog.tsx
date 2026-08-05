@@ -45,8 +45,6 @@ export async function showTwoInputDialog(): Promise<void> {
 			>
 				<Dialog
 					title="Enter values"
-					width={380}
-					height={260}
 					onClose={closeDialog}
 					buttons={[
 						{ text: 'Cancel', onClick: closeDialog },
