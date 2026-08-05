@@ -155,6 +155,10 @@ function runLauncherMode() {
   });
 }
 
+function handleGoogleSignIn(e){
+  console.log(e)
+}
+
 async function startSignIn() {
   els.btn.disabled = true;
   setStatus('Opening Google sign-in…');
@@ -168,14 +172,15 @@ async function startSignIn() {
 
   const params = new URLSearchParams({
     client_id: CONFIG.clientId,
-    redirect_uri: CONFIG.redirectUri,
-    response_type: 'code',
+    // redirect_uri: CONFIG.redirectUri,
+    response_type: 'callback',
+    callback:'handleGoogleSignIn',
     scope: CONFIG.scope,
-    code_challenge: challenge,
-    code_challenge_method: 'S256',
-    state,
-    access_type: 'offline',
-    prompt: 'consent',
+    // code_challenge: challenge,
+    // code_challenge_method: 'S256',
+    // state,
+    // access_type: 'offline',
+    // prompt: 'consent',
   });
 
   const popup = window.open(
@@ -254,5 +259,6 @@ function setStatus(msg, isError = false) {
   } catch {}
 })();
 </script>
+<iframe src="https://yolisses.github.com/export-bom-to-google-sheets/iframe/google-auth.html" frameborder="0"></iframe>
 </body>
 </html>
